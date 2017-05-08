@@ -20,15 +20,15 @@ void merge(int arr[], int low, int mid, int high)
   int a[50],b[50],i,j,k;
   for(i=low,j=0;i<=mid;i++,j++)
     a[j]=arr[i];
-  a[j]=9999;
+  a[j]=-9999;
   for(i=mid+1,j=0;i<=high;i++,j++)
     b[j]=arr[i];
-  b[j]=9999;
+  b[j]=-9999;
 
   i=0,j=0,k=0;
   for(i=low;i<=high;i++)
   {
-    if(a[j]<b[k])
+    if(a[j]>b[k])
       arr[i]=a[j++];
     else
       arr[i]=b[k++];
